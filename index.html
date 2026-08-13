@@ -35,7 +35,8 @@ body.lock {
 }
 
 button,
-input {
+input,
+textarea {
     font-family: inherit;
 }
 
@@ -92,11 +93,6 @@ input {
     flex-direction: column;
 }
 
-
-/* =========================================================
-   WELCOME LOGO
-========================================================= */
-
 .welcome-logo {
     text-align: center;
 }
@@ -125,11 +121,6 @@ input {
 
     text-align: center;
 }
-
-
-/* =========================================================
-   WELCOME TITLE
-========================================================= */
 
 .welcome-title {
     text-align: center;
@@ -173,11 +164,6 @@ input {
     font-size: 20px;
 }
 
-
-/* =========================================================
-   WELCOME CONTENT
-========================================================= */
-
 .welcome-content {
     max-width: 720px;
 
@@ -211,11 +197,6 @@ input {
     font-weight: 800;
 }
 
-
-/* =========================================================
-   OFFER
-========================================================= */
-
 .offer-box {
     background: #f2f2f2;
 
@@ -239,11 +220,6 @@ input {
 .offer-box div {
     margin: 6px 0;
 }
-
-
-/* =========================================================
-   LOADING
-========================================================= */
 
 .loading-area {
     max-width: 420px;
@@ -294,11 +270,6 @@ input {
 
     color: #555;
 }
-
-
-/* =========================================================
-   ENTER
-========================================================= */
 
 .enter-button {
     display: block;
@@ -375,9 +346,6 @@ header {
     justify-content: space-between;
 }
 
-
-/* BRAND */
-
 .brand {
     display: flex;
 
@@ -418,9 +386,6 @@ header {
 
     letter-spacing: .5px;
 }
-
-
-/* NAV */
 
 .nav-links {
     display: flex;
@@ -464,9 +429,6 @@ header {
     width: 100%;
 }
 
-
-/* HEADER BUTTON */
-
 .header-actions {
     display: flex;
 
@@ -496,9 +458,6 @@ header {
 
     background: #111;
 }
-
-
-/* MENU */
 
 .menu-button {
     width: 42px;
@@ -625,9 +584,6 @@ header {
     background: #333;
 }
 
-
-/* HERO VISUAL */
-
 .hero-visual {
     min-height: 390px;
 
@@ -738,9 +694,6 @@ header {
     margin-top: 8px;
 }
 
-
-/* SEARCH */
-
 .search {
     width: 250px;
 
@@ -761,9 +714,6 @@ header {
     border-color: #111;
 }
 
-
-/* PRODUCTS */
-
 .products {
     display: grid;
 
@@ -772,9 +722,6 @@ header {
 
     gap: 16px;
 }
-
-
-/* PRODUCT CARD */
 
 .product {
     background: white;
@@ -794,9 +741,6 @@ header {
     box-shadow:
         0 20px 45px rgba(0,0,0,.08);
 }
-
-
-/* PRODUCT IMAGE */
 
 .product-image {
     height: 250px;
@@ -827,9 +771,6 @@ header {
 .product:hover .product-image img {
     transform: scale(1.05);
 }
-
-
-/* PRODUCT INFO */
 
 .product-info {
     padding: 18px;
@@ -866,18 +807,20 @@ header {
    AROMA
 ========================================================= */
 
-.aroma-area {
+.aroma-section {
     margin-top: 18px;
 }
 
 .aroma-title {
-    font-size: 11px;
+    display: block;
 
-    letter-spacing: 1.5px;
+    font-size: 11px;
 
     font-weight: 800;
 
-    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 9px;
 }
 
 .aroma-list {
@@ -888,16 +831,16 @@ header {
     gap: 7px;
 }
 
-.aroma-btn {
+.aroma-option {
     border: 1px solid #d7d7d7;
 
     background: #fff;
 
     color: #333;
 
-    padding: 8px 11px;
-
     border-radius: 999px;
+
+    padding: 8px 11px;
 
     font-size: 11px;
 
@@ -906,48 +849,38 @@ header {
     transition: .2s;
 }
 
-.aroma-btn:hover {
+.aroma-option:hover {
     border-color: #111;
 
     transform: translateY(-1px);
 }
 
-.aroma-btn.selected {
+.aroma-option.selected {
     background: #111;
 
-    color: white;
+    color: #fff;
 
     border-color: #111;
 }
 
-.aroma-btn.premium {
-    border-color: #b7b7b7;
-}
-
 .premium-note {
-    margin-top: 10px;
-
-    color: #777;
+    margin-top: 9px;
 
     font-size: 11px;
+
+    color: #777;
 
     line-height: 1.5;
 }
 
-.selected-aroma {
-    margin-top: 12px;
-
-    color: #777;
-
-    font-size: 12px;
-}
-
-.selected-aroma strong {
+.premium-note strong {
     color: #111;
 }
 
 
-/* PRODUCT BOTTOM */
+/* =========================================================
+   PRODUCT BOTTOM
+========================================================= */
 
 .product-bottom {
     margin-top: 18px;
@@ -959,15 +892,93 @@ header {
     justify-content: space-between;
 
     gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.price-area {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
 }
 
 .price {
-    font-size: 13px;
+    font-size: 15px;
 
     color: #111;
 
     font-weight: bold;
 }
+
+.size-text {
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.quantity-box {
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: #fff;
+}
+
+.qty-btn {
+    width: 34px;
+
+    height: 34px;
+
+    border: none;
+
+    background: #f3f3f3;
+
+    color: #111;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.qty-btn:hover {
+    background: #e5e5e5;
+}
+
+.qty-value {
+    width: 35px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    border: none;
+
+    outline: none;
+
+    background: white;
+}
+
+
+/* =========================================================
+   PESAN BUTTON
+========================================================= */
 
 .add {
     display: inline-block;
@@ -1002,7 +1013,9 @@ header {
 }
 
 
-/* NO RESULT */
+/* =========================================================
+   NO RESULT
+========================================================= */
 
 .no-result {
     display: none;
@@ -1020,80 +1033,246 @@ header {
 
 
 /* =========================================================
-   OUR CLIENT
+   ORDER MODAL
 ========================================================= */
 
-.clients {
-    padding: 80px 20px;
+.order-overlay {
+    position: fixed;
 
-    background: #fff;
-}
+    inset: 0;
 
-.clients-inner {
-    max-width: 1200px;
+    z-index: 5000;
 
-    margin: auto;
-}
+    background: rgba(0,0,0,.7);
 
-.clients-head {
-    text-align: center;
+    display: flex;
 
-    margin-bottom: 35px;
-}
+    align-items: center;
 
-.clients-label {
-    font-size: 11px;
+    justify-content: center;
 
-    letter-spacing: 3px;
+    padding: 18px;
 
-    color: #777;
+    opacity: 0;
 
-    font-weight: bold;
-}
-
-.clients-title {
-    margin-top: 10px;
-
-    font-size: 38px;
-
-    letter-spacing: -2px;
-}
-
-.clients-subtitle {
-    color: #777;
-
-    font-size: 13px;
-
-    margin-top: 10px;
-}
-
-.client-gallery {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 18px;
-}
-
-.client-gallery img {
-    width: 100%;
-
-    display: block;
-
-    border-radius: 18px;
-
-    background: #f5f5f5;
-
-    border: 1px solid #e5e5e5;
+    visibility: hidden;
 
     transition: .25s;
 }
 
-.client-gallery img:hover {
-    transform: translateY(-4px);
+.order-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.order-modal {
+    width: min(520px, 100%);
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    transform: translateY(20px) scale(.97);
+
+    transition: .25s;
 
     box-shadow:
-        0 20px 45px rgba(0,0,0,.08);
+        0 30px 80px rgba(0,0,0,.3);
+}
+
+.order-overlay.active .order-modal {
+    transform: translateY(0) scale(1);
+}
+
+.order-head {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.order-head h2 {
+    font-size: 21px;
+
+    letter-spacing: -.5px;
+}
+
+.order-close {
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #eee;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+.order-summary {
+    background: #f5f5f5;
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+    margin: 18px 0;
+}
+
+.order-summary small {
+    display: block;
+
+    font-size: 9px;
+
+    color: #777;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 6px;
+}
+
+.order-summary strong {
+    font-size: 16px;
+}
+
+.order-summary div {
+    font-size: 12px;
+
+    color: #666;
+
+    margin-top: 5px;
+
+    line-height: 1.5;
+}
+
+.order-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: .7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    padding: 12px 13px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    color: #111;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #111;
+}
+
+.form-group textarea {
+    min-height: 90px;
+
+    resize: vertical;
+}
+
+.form-help {
+    font-size: 10px;
+
+    color: #888;
+
+    line-height: 1.4;
+}
+
+.submit-order {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 11px;
+
+    padding: 14px;
+
+    background: #111;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    margin-top: 5px;
+
+    transition: .2s;
+}
+
+.submit-order:hover {
+    background: #333;
+
+    transform: translateY(-1px);
+}
+
+.cancel-order {
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    border-radius: 11px;
+
+    padding: 12px;
+
+    background: white;
+
+    color: #111;
+
+    font-weight: bold;
+
+    font-size: 12px;
+
+    cursor: pointer;
 }
 
 
@@ -1415,10 +1594,6 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
-    .client-gallery {
-        grid-template-columns: 1fr;
-    }
-
 }
 
 
@@ -1490,12 +1665,36 @@ footer {
         height: 260px;
     }
 
-    .clients {
-        padding: 60px 15px;
+    .product-bottom {
+        align-items: flex-start;
     }
 
-    .clients-title {
-        font-size: 32px;
+    .quantity-box {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .qty-btn {
+        width: 45px;
+    }
+
+    .qty-value {
+        width: 55px;
+    }
+
+    .add {
+        flex: 1;
+
+        text-align: center;
+    }
+
+    .order-modal {
+        padding: 20px;
+
+        border-radius: 17px;
     }
 
 }
@@ -1723,10 +1922,6 @@ footer {
                 Tentang Kami
             </a>
 
-            <a href="#clients">
-                Our Client
-            </a>
-
             <a href="#kontak">
                 Kontak
             </a>
@@ -1797,9 +1992,9 @@ footer {
             Temukan berbagai produk dari
             PT. Multi Fresh Indonesia.
             Pilih produk yang kamu butuhkan,
-            tentukan aroma jika tersedia,
-            lalu langsung hubungi kami melalui
-            WhatsApp untuk pemesanan.
+            tentukan aroma dan jumlahnya,
+            kemudian langsung hubungi kami
+            melalui WhatsApp.
         </p>
 
 
@@ -1841,7 +2036,6 @@ footer {
 
     <div class="catalog-inner">
 
-
         <div class="catalog-top reveal">
 
             <div>
@@ -1868,14 +2062,10 @@ footer {
         </div>
 
 
-
         <div
             class="products"
             id="products"
         >
-
-            <!-- PRODUK DIBUAT OTOMATIS -->
-
         </div>
 
 
@@ -1893,66 +2083,12 @@ footer {
 
 
 <!-- =====================================================
-     OUR CLIENT
-===================================================== -->
-
-<section
-    class="clients"
-    id="clients"
->
-
-    <div class="clients-inner">
-
-        <div class="clients-head reveal">
-
-            <div class="clients-label">
-                OUR CLIENT
-            </div>
-
-            <h2 class="clients-title">
-                Dipercaya berbagai bisnis.
-            </h2>
-
-            <p class="clients-subtitle">
-                Beberapa client yang telah menggunakan
-                produk dan layanan Multi Fresh Indonesia.
-            </p>
-
-        </div>
-
-
-        <div class="client-gallery">
-
-            <img
-                src="https://h.top4top.io/p_3877qvnte1.jpg"
-                alt="Our Client Multi Fresh Indonesia"
-                loading="lazy"
-                class="reveal"
-            >
-
-            <img
-                src="https://g.top4top.io/p_387799mjv1.jpg"
-                alt="Our Client Multi Fresh Indonesia"
-                loading="lazy"
-                class="reveal"
-            >
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
      FOOTER
 ===================================================== -->
 
 <footer id="kontak">
 
     <div class="footer-inner">
-
 
         <div>
 
@@ -1991,10 +2127,6 @@ footer {
 
             <a href="#tentang">
                 Tentang Kami
-            </a>
-
-            <a href="#clients">
-                Our Client
             </a>
 
             <a href="#kontak">
@@ -2073,9 +2205,7 @@ footer {
     onclick="outsideMenu(event)"
 >
 
-
     <aside class="sidebar">
-
 
         <div class="sidebar-head">
 
@@ -2094,7 +2224,6 @@ footer {
 
 
         <div class="sidebar-menu">
-
 
             <a
                 href="#"
@@ -2139,20 +2268,6 @@ footer {
 
 
             <a
-                href="#clients"
-                onclick="closeMenu()"
-            >
-
-                <span class="sidebar-icon">
-                    ★
-                </span>
-
-                Our Client
-
-            </a>
-
-
-            <a
                 href="https://wa.me/6285795209442"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -2180,7 +2295,6 @@ footer {
 
             </a>
 
-
         </div>
 
 
@@ -2196,8 +2310,8 @@ footer {
 
             <p>
                 Hubungi kami untuk informasi
-                produk, harga, stok, aroma,
-                dan pemesanan.
+                produk, harga, stok, dan
+                pemesanan.
             </p>
 
             <br>
@@ -2222,8 +2336,143 @@ footer {
 
         </div>
 
-
     </aside>
+
+</div>
+
+
+
+<!-- =====================================================
+     ORDER MODAL
+===================================================== -->
+
+<div
+    class="order-overlay"
+    id="orderOverlay"
+    onclick="outsideOrder(event)"
+>
+
+    <div class="order-modal">
+
+        <div class="order-head">
+
+            <h2>
+                Detail Pesanan
+            </h2>
+
+            <button
+                class="order-close"
+                onclick="closeOrder()"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            class="order-summary"
+            id="orderSummary"
+        >
+        </div>
+
+
+        <form
+            class="order-form"
+            id="orderForm"
+            onsubmit="sendOrder(event)"
+        >
+
+            <div class="form-group">
+
+                <label for="customerName">
+                    NAMA
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Masukkan nama"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="customerPhone">
+                    NOMOR WHATSAPP
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    inputmode="tel"
+                    placeholder="Contoh: 085xxxxxxxxx"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="customerAddress">
+                    ALAMAT LENGKAP
+                </label>
+
+                <textarea
+                    id="customerAddress"
+                    placeholder="Nama jalan, nomor rumah, desa/kelurahan, kecamatan, kota/kabupaten, provinsi, kode pos..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="customerNote">
+                    CATATAN PESANAN
+                    <span style="font-weight:normal;color:#888;">
+                        (Opsional)
+                    </span>
+                </label>
+
+                <textarea
+                    id="customerNote"
+                    placeholder="Contoh: Tolong hubungi saya sebelum pengiriman."
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-help">
+                Setelah menekan tombol, WhatsApp akan dibuka
+                dengan detail pesanan yang sudah terisi.
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-order"
+            >
+                Kirim Pesanan via WhatsApp →
+            </button>
+
+
+            <button
+                type="button"
+                class="cancel-order"
+                onclick="closeOrder()"
+            >
+                Batal
+            </button>
+
+        </form>
+
+    </div>
 
 </div>
 
@@ -2237,6 +2486,133 @@ footer {
 
 const WHATSAPP_NUMBER = "6285795209442";
 
+const MAX_QUANTITY = 100;
+
+
+/* =========================================================
+   DATA AROMA DARI BOOKLET
+========================================================= */
+
+/*
+    HANYA PRODUK YANG ADA DI BOOKLET
+    YANG DIBERI VARIAN AROMA.
+*/
+
+const aromas = {
+
+    "Shower Gel": [
+        "Bubble Gum",
+        "Lavender",
+        "Jasmine",
+        "Vanilla",
+        "Baccarat",
+        "White Musk",
+        "Black Pepper Citrus",
+        "Coconut Milk Lemon",
+        "Coconut",
+        "Sakura",
+        "Mint",
+        "Maiden",
+        "Ocean Fresh",
+        "Citrus",
+        "Coconut Vanilla",
+        "Chocolate Mint"
+    ],
+
+    "Shampoo": [
+        "Bubble Gum",
+        "Lavender",
+        "Jasmine",
+        "White Musk",
+        "Baccarat",
+        "Black Pepper Citrus",
+        "Coconut Milk Lemon",
+        "Coconut",
+        "Sakura",
+        "Mint",
+        "Maiden",
+        "Ocean Fresh",
+        "Citrus",
+        "Coconut Vanilla",
+        "Chocolate Mint"
+    ],
+
+    "Conditioner": [
+        "Jasmine",
+        "Apple",
+        "Greentea",
+        "Coconut",
+        "Lemon",
+        "Strawberry",
+        "Melon",
+        "Vanilla"
+    ],
+
+    "Hand Wash": [
+        "Mint",
+        "Apple",
+        "Grape",
+        "Ocean Fresh",
+        "Bubble Gum",
+        "Strawberry"
+    ],
+
+    "Dish Wash": [
+        "Lime",
+        "Lemongrass"
+    ],
+
+    "Floor Detergent": [
+        "Apple",
+        "Citrus",
+        "Lemon",
+        "Lemongrass",
+        "Lavender",
+        "Rose"
+    ],
+
+    "Cloth Detergent": [
+        "Ocean Fresh",
+        "Molto Blue",
+        "Baccarat",
+        "Grace"
+    ],
+
+    "Softener": [
+        "Akasia",
+        "Sakura",
+        "Snappy",
+        "Ocean Fresh"
+    ],
+
+    "Iron Spray": [
+        "Downy Black",
+        "Downy Gold",
+        "Snappy",
+        "Akasia",
+        "Ocean Fresh",
+        "Sakura"
+    ]
+
+};
+
+
+/* =========================================================
+   PREMIUM AROMA DARI BOOKLET
+========================================================= */
+
+const premiumAromas = [
+
+    "Baccarat",
+    "White Musk",
+    "Black Pepper Citrus",
+    "Coconut Milk Lemon",
+    "Citrus",
+    "Coconut Vanilla",
+    "Chocolate Mint"
+
+];
+
 
 /* =========================================================
    DATA PRODUK
@@ -2244,199 +2620,12 @@ const WHATSAPP_NUMBER = "6285795209442";
 
 const productsData = [
 
-    /* =====================================================
-       PRODUK DENGAN AROMA DARI BOOKLET
-    ===================================================== */
-
-    {
-        name: "Shower Gel",
-        size: "5 Liter",
-        price: "Rp110.000",
-        image: "https://h.top4top.io/p_3877ce42l1.jpg",
-
-        aromas: [
-            "Bubble Gum",
-            "Lavender",
-            "Jasmine",
-            "Vanilla",
-            "Baccarat",
-            "White Musk",
-            "Black Pepper Citrus",
-            "Coconut Milk Lemon",
-            "Coconut",
-            "Sakura",
-            "Mint",
-            "Maiden",
-            "Ocean Fresh",
-            "Citrus",
-            "Coconut Vanilla",
-            "Chocolate Mint"
-        ],
-
-        premium: [
-            "Baccarat",
-            "White Musk",
-            "Black Pepper Citrus",
-            "Coconut Milk Lemon",
-            "Citrus",
-            "Coconut Vanilla",
-            "Chocolate Mint"
-        ]
-    },
-
-
-    {
-        name: "Shampoo",
-        size: "5 Liter",
-        price: "Rp120.000",
-        image: "https://g.top4top.io/p_3877tt7k21.jpg",
-
-        aromas: [
-            "Bubble Gum",
-            "Lavender",
-            "Jasmine",
-            "White Musk",
-            "Baccarat",
-            "Black Pepper Citrus",
-            "Coconut Milk Lemon",
-            "Coconut",
-            "Sakura",
-            "Mint",
-            "Maiden",
-            "Ocean Fresh",
-            "Citrus",
-            "Coconut Vanilla",
-            "Chocolate Mint"
-        ],
-
-        premium: [
-            "Baccarat",
-            "White Musk",
-            "Black Pepper Citrus",
-            "Coconut Milk Lemon",
-            "Citrus",
-            "Coconut Vanilla",
-            "Chocolate Mint"
-        ]
-    },
-
-
-    {
-        name: "Conditioner",
-        size: "5 Liter",
-        price: "Rp185.000",
-        image: "https://b.top4top.io/p_3877gf6av1.jpg",
-
-        aromas: [
-            "Jasmine",
-            "Apple",
-            "Greentea",
-            "Coconut",
-            "Lemon",
-            "Strawberry",
-            "Melon",
-            "Vanilla"
-        ]
-    },
-
-
-    {
-        name: "Hand Wash",
-        size: "5 Liter",
-        price: "Rp60.000",
-        image: "https://k.top4top.io/p_3877ochp91.jpg",
-
-        aromas: [
-            "Mint",
-            "Apple",
-            "Grape",
-            "Ocean Fresh",
-            "Bubble Gum",
-            "Strawberry"
-        ]
-    },
-
-
-    {
-        name: "Dish Wash",
-        size: "5 Liter",
-        price: "Rp63.000",
-        image: "https://d.top4top.io/p_38771eu1o1.jpg",
-
-        aromas: [
-            "Lime",
-            "Lemongrass"
-        ]
-    },
-
-
-    {
-        name: "Floor Detergent",
-        size: "5 Liter",
-        price: "Rp55.000",
-        image: "https://c.top4top.io/p_3877hgzi81.jpg",
-
-        aromas: [
-            "Apple",
-            "Citrus",
-            "Lemon",
-            "Lemongrass",
-            "Lavender",
-            "Rose"
-        ]
-    },
-
-
-    {
-        name: "Cloth Detergent",
-        size: "5 Liter",
-        price: "Rp45.000",
-        image: "https://e.top4top.io/p_3877sghod1.jpg",
-
-        aromas: [
-            "Ocean Fresh",
-            "Molto Blue",
-            "Baccarat",
-            "Grace"
-        ]
-    },
-
-
-    {
-        name: "Softener",
-        size: "5 Liter",
-        price: "Rp55.000",
-        image: "https://i.top4top.io/p_3877ihot61.jpg",
-
-        aromas: [
-            "Akasia",
-            "Sakura",
-            "Snappy",
-            "Ocean Fresh"
-        ]
-    },
-
-
     {
         name: "Iron Spray",
         size: "5 Liter",
         price: "Rp150.000",
-        image: "https://l.top4top.io/p_38773gc9p1.jpg",
-
-        aromas: [
-            "Downy Black",
-            "Downy Gold",
-            "Snappy",
-            "Akasia",
-            "Ocean Fresh",
-            "Sakura"
-        ]
+        image: "https://l.top4top.io/p_38773gc9p1.jpg"
     },
-
-
-    /* =====================================================
-       PRODUK TANPA AROMA DI BOOKLET
-    ===================================================== */
 
     {
         name: "Hand Sanitizer",
@@ -2445,7 +2634,6 @@ const productsData = [
         image: "https://k.top4top.io/p_3877ochp91.jpg"
     },
 
-
     {
         name: "Hand Sanitizer Liquid",
         size: "5 Liter",
@@ -2453,14 +2641,60 @@ const productsData = [
         image: "https://i.top4top.io/p_3877zpe9s1.jpg"
     },
 
+    {
+        name: "Shower Gel",
+        size: "5 Liter",
+        price: "Rp110.000",
+        image: "https://h.top4top.io/p_3877ce42l1.jpg"
+    },
+
+    {
+        name: "Softener",
+        size: "5 Liter",
+        price: "Rp55.000",
+        image: "https://i.top4top.io/p_3877ihot61.jpg"
+    },
+
+    {
+        name: "Shampoo",
+        size: "5 Liter",
+        price: "Rp120.000",
+        image: "https://g.top4top.io/p_3877tt7k21.jpg"
+    },
+
+    /*
+        DIGANTI DARI "Detergent"
+        MENJADI "Cloth Detergent"
+        SESUAI BOOKLET.
+    */
+
+    {
+        name: "Cloth Detergent",
+        size: "5 Liter",
+        price: "Rp45.000",
+        image: "https://e.top4top.io/p_3877sghod1.jpg"
+    },
 
     {
         name: "Pet Shampoo",
-        size: "5 Liter",
+        size: "Contact",
         price: "Hubungi kami",
         image: "https://f.top4top.io/p_3877cxgbb1.jpg"
     },
 
+    {
+        name: "Dish Wash",
+        size: "5 Liter",
+        price: "Rp63.000",
+        image: "https://d.top4top.io/p_38771eu1o1.jpg"
+    },
+
+    {
+        name: "Floor Cleaner",
+        size: "5 Liter",
+        price: "Rp55.000",
+        image: "https://c.top4top.io/p_3877hgzi81.jpg"
+    },
 
     {
         name: "Ceramic Cleaner",
@@ -2469,14 +2703,12 @@ const productsData = [
         image: "https://l.top4top.io/p_3877bi1q91.jpg"
     },
 
-
     {
         name: "MPC",
         size: "5 Liter",
         price: "Hubungi kami",
         image: "https://j.top4top.io/p_3877w3zeb1.jpg"
     },
-
 
     {
         name: "Stainless Steel Crust",
@@ -2485,14 +2717,12 @@ const productsData = [
         image: "https://g.top4top.io/p_3877il4ri1.jpg"
     },
 
-
     {
         name: "Car Shampoo",
         size: "5 Liter",
         price: "Rp55.000",
         image: "https://l.top4top.io/p_3877a5p4n1.jpg"
     },
-
 
     {
         name: "Silicon Oil",
@@ -2501,14 +2731,12 @@ const productsData = [
         image: "https://e.top4top.io/p_38771ipws1.jpg"
     },
 
-
     {
-        name: "2in1 Shower Gel & Shampoo",
+        name: "Conditioner",
         size: "35 ml",
-        price: "Rp2.000",
-        image: "https://c.top4top.io/p_3877cpnnf1.jpg"
+        price: "Rp2.200",
+        image: "https://b.top4top.io/p_3877gf6av1.jpg"
     },
-
 
     {
         name: "Shower Gel",
@@ -2517,30 +2745,127 @@ const productsData = [
         image: "https://a.top4top.io/p_3877vyvih1.jpg"
     },
 
+    {
+        name: "2in1 Shower Gel & Shampoo",
+        size: "35 ml",
+        price: "Rp2.000",
+        image: "https://c.top4top.io/p_3877cpnnf1.jpg"
+    },
 
     {
         name: "Shampoo",
         size: "35 ml",
         price: "Rp2.000",
         image: "https://k.top4top.io/p_38773atsy1.jpg"
-    },
-
-
-    {
-        name: "Conditioner",
-        size: "35 ml",
-        price: "Rp2.200",
-        image: "https://b.top4top.io/p_3877gf6av1.jpg"
     }
 
 ];
 
 
 /* =========================================================
-   STATE AROMA
+   STATE
 ========================================================= */
 
-const selectedAromas = {};
+let currentOrder = null;
+
+
+/* =========================================================
+   CEK AROMA
+========================================================= */
+
+function getAromas(productName) {
+
+    return aromas[productName] || [];
+
+}
+
+
+function isPremiumAroma(aroma) {
+
+    return premiumAromas.includes(aroma);
+
+}
+
+
+/* =========================================================
+   RENDER AROMA
+========================================================= */
+
+function renderAroma(product, index) {
+
+    const list = getAromas(product.name);
+
+    if (!list.length) {
+
+        return "";
+
+    }
+
+
+    let buttons = "";
+
+
+    list.forEach(function(aroma, aromaIndex) {
+
+        const premium =
+            isPremiumAroma(aroma);
+
+
+        buttons += `
+
+            <button
+                type="button"
+                class="aroma-option ${aromaIndex === 0 ? "selected" : ""}"
+                data-product-index="${index}"
+                data-aroma="${aroma}"
+                onclick="selectAroma(${index}, '${escapeJs(aroma)}')"
+            >
+                ${aroma}
+            </button>
+
+        `;
+
+    });
+
+
+    return `
+
+        <div class="aroma-section">
+
+            <span class="aroma-title">
+                VARIAN AROMA
+            </span>
+
+
+            <div class="aroma-list">
+
+                ${buttons}
+
+            </div>
+
+
+            <div class="premium-note">
+                * Aroma premium +Rp15.000
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   ESCAPE JAVASCRIPT STRING
+========================================================= */
+
+function escapeJs(value) {
+
+    return value
+        .replace(/\\/g, "\\\\")
+        .replace(/'/g, "\\'");
+
+}
 
 
 /* =========================================================
@@ -2556,7 +2881,11 @@ function renderProducts(list) {
     productsContainer.innerHTML = "";
 
 
-    list.forEach(function(product, index) {
+    list.forEach(function(product) {
+
+        const originalIndex =
+            productsData.indexOf(product);
+
 
         const card =
             document.createElement("div");
@@ -2571,85 +2900,11 @@ function renderProducts(list) {
         );
 
 
-        const productId =
-            "product-" + index;
+        card.setAttribute(
+            "data-index",
+            originalIndex
+        );
 
-
-        let aromaHTML = "";
-
-
-        /* =================================================
-           KALAU ADA AROMA
-        ================================================= */
-
-        if (
-            product.aromas &&
-            product.aromas.length > 0
-        ) {
-
-            aromaHTML = `
-
-                <div class="aroma-area">
-
-                    <div class="aroma-title">
-                        VARIAN AROMA
-                    </div>
-
-
-                    <div class="aroma-list">
-
-                        ${product.aromas.map(function(aroma) {
-
-                            const isPremium =
-                                product.premium &&
-                                product.premium.includes(aroma);
-
-
-                            return `
-
-                                <button
-                                    type="button"
-                                    class="aroma-btn ${isPremium ? "premium" : ""}"
-                                    data-product="${productId}"
-                                    data-aroma="${escapeHTML(aroma)}"
-                                    onclick="selectAroma(
-                                        '${productId}',
-                                        '${escapeJS(aroma)}',
-                                        this
-                                    )"
-                                >
-                                    ${escapeHTML(aroma)}
-                                </button>
-
-                            `;
-
-                        }).join("")}
-
-                    </div>
-
-
-                    <div class="premium-note">
-                        * Premium scent +Rp15.000
-                    </div>
-
-
-                    <div
-                        class="selected-aroma"
-                        id="selected-${productId}"
-                    >
-                        Pilih aroma
-                    </div>
-
-                </div>
-
-            `;
-
-        }
-
-
-        /* =================================================
-           WHATSAPP BUTTON
-        ================================================= */
 
         card.innerHTML = `
 
@@ -2657,7 +2912,7 @@ function renderProducts(list) {
 
                 <img
                     src="${product.image}"
-                    alt="${escapeHTML(product.name)}"
+                    alt="${product.name}"
                     loading="lazy"
                     onerror="this.style.display='none'"
                 >
@@ -2673,32 +2928,76 @@ function renderProducts(list) {
 
 
                 <h3>
-                    ${escapeHTML(product.name)}
+                    ${product.name}
                 </h3>
 
 
                 <p>
-                    ${escapeHTML(product.size)}
+                    Produk ${product.name.toLowerCase()}
+                    berkualitas dari Multi Fresh Indonesia.
                 </p>
 
 
-                ${aromaHTML}
+                ${renderAroma(product, originalIndex)}
 
 
                 <div class="product-bottom">
 
-                    <span class="price">
-                        ${escapeHTML(product.price)}
-                    </span>
+                    <div class="price-area">
+
+                        <span class="price">
+                            ${product.price}
+                        </span>
+
+                        <span class="size-text">
+                            ${product.size}
+                        </span>
+
+                    </div>
+
+
+                    <div class="quantity-box">
+
+                        <button
+                            type="button"
+                            class="qty-btn"
+                            onclick="changeQuantity(${originalIndex}, -1)"
+                            aria-label="Kurangi jumlah"
+                        >
+                            −
+                        </button>
+
+
+                        <input
+                            type="number"
+                            class="qty-value"
+                            id="qty-${originalIndex}"
+                            value="1"
+                            min="1"
+                            max="100"
+                            step="1"
+                            onchange="setQuantity(${originalIndex}, this.value)"
+                            oninput="setQuantity(${originalIndex}, this.value)"
+                            aria-label="Jumlah"
+                        >
+
+
+                        <button
+                            type="button"
+                            class="qty-btn"
+                            onclick="changeQuantity(${originalIndex}, 1)"
+                            aria-label="Tambah jumlah"
+                        >
+                            +
+                        </button>
+
+                    </div>
 
 
                     <button
                         type="button"
                         class="add"
-                        onclick="orderProduct(
-                            ${index},
-                            '${productId}'
-                        )"
+                        onclick="openOrder(${originalIndex})"
                     >
                         + Pesan
                     </button>
@@ -2721,153 +3020,450 @@ function renderProducts(list) {
 
 
 /* =========================================================
-   ESCAPE HTML
-========================================================= */
-
-function escapeHTML(text) {
-
-    return String(text)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-
-}
-
-
-function escapeJS(text) {
-
-    return String(text)
-        .replace(/\\/g, "\\\\")
-        .replace(/'/g, "\\'")
-        .replace(/\n/g, "\\n")
-        .replace(/\r/g, "\\r");
-
-}
-
-
-/* =========================================================
    PILIH AROMA
 ========================================================= */
 
-function selectAroma(
-    productId,
-    aroma,
-    button
-) {
+function selectAroma(index, aroma) {
 
-    selectedAromas[productId] =
-        aroma;
+    const card =
+        document.querySelector(
+            `.product[data-index="${index}"]`
+        );
 
 
-    const parent =
-        button.parentElement;
+    if (!card) {
+
+        return;
+
+    }
 
 
-    parent
-        .querySelectorAll(".aroma-btn")
-        .forEach(function(btn) {
+    card
+        .querySelectorAll(".aroma-option")
+        .forEach(function(button) {
 
-            btn.classList.remove(
-                "selected"
-            );
+            button.classList.remove("selected");
 
         });
 
 
-    button.classList.add(
-        "selected"
-    );
-
-
     const selected =
-        document.getElementById(
-            "selected-" + productId
+        card.querySelector(
+            `.aroma-option[data-aroma="${CSS.escape(aroma)}"]`
         );
 
 
-    selected.innerHTML =
-        "Aroma dipilih: <strong>" +
-        escapeHTML(aroma) +
-        "</strong>";
+    if (selected) {
+
+        selected.classList.add("selected");
+
+    }
 
 }
 
 
 /* =========================================================
-   PESAN PRODUK
+   AMBIL AROMA YANG DIPILIH
 ========================================================= */
 
-function orderProduct(
-    index,
-    productId
-) {
+function getSelectedAroma(index) {
+
+    const card =
+        document.querySelector(
+            `.product[data-index="${index}"]`
+        );
+
+
+    if (!card) {
+
+        return "";
+
+    }
+
+
+    const selected =
+        card.querySelector(
+            ".aroma-option.selected"
+        );
+
+
+    return selected
+        ? selected.getAttribute("data-aroma")
+        : "";
+
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+function getQuantity(index) {
+
+    const input =
+        document.getElementById(
+            "qty-" + index
+        );
+
+
+    if (!input) {
+
+        return 1;
+
+    }
+
+
+    let value =
+        parseInt(input.value, 10);
+
+
+    if (isNaN(value)) {
+
+        value = 1;
+
+    }
+
+
+    value =
+        Math.max(
+            1,
+            Math.min(
+                MAX_QUANTITY,
+                value
+            )
+        );
+
+
+    input.value = value;
+
+
+    return value;
+
+}
+
+
+function setQuantity(index, value) {
+
+    let quantity =
+        parseInt(value, 10);
+
+
+    if (isNaN(quantity)) {
+
+        quantity = 1;
+
+    }
+
+
+    quantity =
+        Math.max(
+            1,
+            Math.min(
+                MAX_QUANTITY,
+                quantity
+            )
+        );
+
+
+    const input =
+        document.getElementById(
+            "qty-" + index
+        );
+
+
+    if (input) {
+
+        input.value = quantity;
+
+    }
+
+}
+
+
+function changeQuantity(index, amount) {
+
+    const current =
+        getQuantity(index);
+
+
+    const next =
+        current + amount;
+
+
+    setQuantity(
+        index,
+        next
+    );
+
+}
+
+
+/* =========================================================
+   BUKA FORM PESANAN
+========================================================= */
+
+function openOrder(index) {
 
     const product =
         productsData[index];
 
 
-    let aroma =
-        selectedAromas[productId];
+    if (!product) {
+
+        return;
+
+    }
 
 
-    /* PRODUK DENGAN AROMA */
+    const quantity =
+        getQuantity(index);
+
+
+    const aroma =
+        getSelectedAroma(index);
+
+
+    currentOrder = {
+
+        index: index,
+
+        product: product,
+
+        quantity: quantity,
+
+        aroma: aroma
+
+    };
+
+
+    const aromaText =
+        aroma
+        ? `<div><strong>Aroma:</strong> ${aroma}</div>`
+        : `<div><strong>Aroma:</strong> Tidak ada varian aroma</div>`;
+
+
+    const summary =
+        document.getElementById(
+            "orderSummary"
+        );
+
+
+    summary.innerHTML = `
+
+        <small>
+            PESANAN ANDA
+        </small>
+
+
+        <strong>
+            ${product.name}
+        </strong>
+
+
+        <div>
+            Ukuran: ${product.size}
+        </div>
+
+
+        ${aromaText}
+
+
+        <div>
+            Jumlah: ${quantity}
+        </div>
+
+
+        <div>
+            Harga: ${product.price}
+        </div>
+
+    `;
+
+
+    document
+        .getElementById("orderOverlay")
+        .classList
+        .add("active");
+
+
+    document.body.classList.add("lock");
+
+
+    setTimeout(function() {
+
+        document
+            .getElementById("customerName")
+            .focus();
+
+    }, 250);
+
+}
+
+
+/* =========================================================
+   TUTUP FORM
+========================================================= */
+
+function closeOrder() {
+
+    document
+        .getElementById("orderOverlay")
+        .classList
+        .remove("active");
+
+
+    document.body.classList.remove("lock");
+
+}
+
+
+function outsideOrder(event) {
 
     if (
-        product.aromas &&
-        product.aromas.length > 0
+        event.target.id ===
+        "orderOverlay"
     ) {
 
-        if (!aroma) {
+        closeOrder();
 
-            alert(
-                "Pilih varian aroma terlebih dahulu ya."
-            );
+    }
 
-            return;
+}
+
+
+/* =========================================================
+   KIRIM ORDER KE WHATSAPP
+========================================================= */
+
+function sendOrder(event) {
+
+    event.preventDefault();
+
+
+    if (!currentOrder) {
+
+        return;
+
+    }
+
+
+    const name =
+        document
+        .getElementById("customerName")
+        .value
+        .trim();
+
+
+    const phone =
+        document
+        .getElementById("customerPhone")
+        .value
+        .trim();
+
+
+    const address =
+        document
+        .getElementById("customerAddress")
+        .value
+        .trim();
+
+
+    const note =
+        document
+        .getElementById("customerNote")
+        .value
+        .trim();
+
+
+    if (
+        !name ||
+        !phone ||
+        !address
+    ) {
+
+        alert(
+            "Mohon isi nama, nomor WhatsApp, dan alamat lengkap."
+        );
+
+        return;
+
+    }
+
+
+    const product =
+        currentOrder.product;
+
+
+    const quantity =
+        currentOrder.quantity;
+
+
+    const aroma =
+        currentOrder.aroma;
+
+
+    let message =
+`Halo Multi Fresh Indonesia, saya ingin memesan:
+
+Produk: ${product.name}
+Ukuran: ${product.size}
+Jumlah: ${quantity}`;
+
+
+    if (aroma) {
+
+        message +=
+            `\nAroma: ${aroma}`;
+
+        if (
+            isPremiumAroma(aroma)
+        ) {
+
+            message +=
+                ` (Premium +Rp15.000)`;
 
         }
 
     }
 
 
-    let message =
-        "Halo Multi Fresh Indonesia,%0A%0A" +
-        "Saya ingin memesan:%0A" +
-        "Produk: " +
-        encodeURIComponent(product.name) +
-        "%0A" +
-        "Ukuran: " +
-        encodeURIComponent(product.size);
+    message +=
+`
+
+Nama: ${name}
+No. WhatsApp: ${phone}
+Alamat: ${address}`;
 
 
-    if (aroma) {
+    if (note) {
 
         message +=
-            "%0A" +
-            "Aroma: " +
-            encodeURIComponent(aroma);
+            `\nCatatan: ${note}`;
 
     }
 
 
     message +=
-        "%0A%0ATerima kasih.";
+`
+
+Mohon info ketersediaan dan total harganya.
+Terima kasih.`;
 
 
-    const whatsappLink =
+    const whatsappURL =
         "https://wa.me/" +
         WHATSAPP_NUMBER +
         "?text=" +
-        message;
+        encodeURIComponent(message);
 
 
     window.open(
-        whatsappLink,
-        "_blank",
-        "noopener,noreferrer"
+        whatsappURL,
+        "_blank"
     );
+
+
+    closeOrder();
 
 }
 
@@ -2905,15 +3501,13 @@ function searchProduct() {
             name.includes(search)
         ) {
 
-            card.style.display =
-                "";
+            card.style.display = "";
 
             found++;
 
         } else {
 
-            card.style.display =
-                "none";
+            card.style.display = "none";
 
         }
 
@@ -2921,9 +3515,7 @@ function searchProduct() {
 
 
     const noResult =
-        document.getElementById(
-            "noResult"
-        );
+        document.getElementById("noResult");
 
 
     if (found === 0) {
@@ -2949,24 +3541,20 @@ let progress = 0;
 
 const TOTAL_TIME = 15000;
 
-
 const progressBar =
     document.getElementById(
         "loadingProgress"
     );
-
 
 const progressText =
     document.getElementById(
         "loadingPercent"
     );
 
-
 const welcome =
     document.getElementById(
         "welcome"
     );
-
 
 const startTime =
     Date.now();
@@ -2983,10 +3571,7 @@ const loading =
             Math.min(
                 100,
                 Math.floor(
-                    (
-                        elapsed /
-                        TOTAL_TIME
-                    ) * 100
+                    (elapsed / TOTAL_TIME) * 100
                 )
             );
 
@@ -3001,19 +3586,14 @@ const loading =
 
         if (progress >= 100) {
 
-            clearInterval(
-                loading
-            );
+            clearInterval(loading);
 
 
-            setTimeout(
-                function() {
+            setTimeout(function() {
 
-                    enterCatalog();
+                enterCatalog();
 
-                },
-                300
-            );
+            }, 300);
 
         }
 
@@ -3026,19 +3606,11 @@ const loading =
 
 function enterCatalog() {
 
-    clearInterval(
-        loading
-    );
+    clearInterval(loading);
 
+    welcome.classList.add("hide");
 
-    welcome.classList.add(
-        "hide"
-    );
-
-
-    document.body.classList.remove(
-        "lock"
-    );
+    document.body.classList.remove("lock");
 
 }
 
@@ -3055,9 +3627,7 @@ function openMenu() {
         .add("active");
 
 
-    document.body.classList.add(
-        "lock"
-    );
+    document.body.classList.add("lock");
 
 }
 
@@ -3070,9 +3640,7 @@ function closeMenu() {
         .remove("active");
 
 
-    document.body.classList.remove(
-        "lock"
-    );
+    document.body.classList.remove("lock");
 
 }
 
@@ -3153,7 +3721,7 @@ function observeReveal() {
 
 
 /* =========================================================
-   ESC UNTUK SIDEBAR
+   ESC
 ========================================================= */
 
 document.addEventListener(
@@ -3165,6 +3733,8 @@ document.addEventListener(
         ) {
 
             closeMenu();
+
+            closeOrder();
 
         }
 
