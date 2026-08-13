@@ -9,6 +9,10 @@
 
 <style>
 
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -44,14 +48,21 @@ input {
     position: fixed;
     inset: 0;
     z-index: 9999;
+
     background: #050505;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 15px;
+
     opacity: 1;
     visibility: visible;
-    transition: opacity .8s ease, visibility .8s ease;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
 }
 
 .welcome.hide {
@@ -62,16 +73,29 @@ input {
 
 .welcome-paper {
     position: relative;
+
     width: min(1000px, 100%);
     height: min(700px, 94vh);
+
     background: #fff;
+
     border-radius: 20px;
+
     padding: 35px 70px;
+
     overflow: hidden;
-    box-shadow: 0 30px 80px rgba(0,0,0,.55);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.55);
+
     display: flex;
     flex-direction: column;
 }
+
+
+/* =========================================================
+   WELCOME LOGO
+========================================================= */
 
 .welcome-logo {
     text-align: center;
@@ -80,54 +104,93 @@ input {
 .welcome-logo img {
     width: 82px;
     height: 82px;
+
     object-fit: contain;
+
     border-radius: 18px;
+
     display: block;
+
     margin: 0 auto 10px;
+
     background: #111;
 }
 
 .welcome-company {
     font-size: 13px;
+
     font-weight: 800;
+
     letter-spacing: 1px;
+
     text-align: center;
 }
 
+
+/* =========================================================
+   WELCOME TITLE
+========================================================= */
+
 .welcome-title {
     text-align: center;
+
     margin-top: 25px;
+
     font-size: clamp(32px, 5vw, 55px);
+
     font-weight: 600;
+
     letter-spacing: -2px;
+
+    color: #111;
 }
 
 .welcome-line {
     width: 250px;
     height: 2px;
+
     background: #111;
+
     margin: 15px auto 25px;
+
     position: relative;
 }
 
 .welcome-line::after {
     content: "♡";
+
     position: absolute;
+
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
+
     background: white;
+
     padding: 0 12px;
+
     font-size: 20px;
 }
 
+
+/* =========================================================
+   WELCOME CONTENT
+========================================================= */
+
 .welcome-content {
     max-width: 720px;
+
     width: 100%;
+
     margin: auto;
+
     font-size: 14px;
+
     line-height: 1.7;
+
     overflow-y: auto;
+
     padding-right: 10px;
 }
 
@@ -148,17 +211,28 @@ input {
     font-weight: 800;
 }
 
+
+/* =========================================================
+   OFFER
+========================================================= */
+
 .offer-box {
     background: #f2f2f2;
+
     border-left: 4px solid #111;
+
     padding: 15px 18px;
+
     border-radius: 0 12px 12px 0;
+
     margin: 15px 0;
 }
 
 .offer-box strong {
     display: block;
+
     margin-bottom: 8px;
+
     font-size: 15px;
 }
 
@@ -166,65 +240,105 @@ input {
     margin: 6px 0;
 }
 
+
+/* =========================================================
+   LOADING
+========================================================= */
+
 .loading-area {
     max-width: 420px;
+
     width: 100%;
+
     margin: 10px auto 0;
+
     text-align: center;
 }
 
 .loading-text {
     font-size: 12px;
+
     margin-bottom: 10px;
+
     color: #555;
 }
 
 .loading-bar {
     width: 100%;
+
     height: 6px;
+
     background: #e8e8e8;
+
     border-radius: 20px;
+
     overflow: hidden;
 }
 
 .loading-progress {
     width: 0%;
+
     height: 100%;
+
     background: #111;
+
     border-radius: 20px;
+
     transition: width .1s linear;
 }
 
 .loading-percent {
     font-size: 11px;
+
     margin-top: 7px;
+
     color: #555;
 }
 
+
+/* =========================================================
+   ENTER
+========================================================= */
+
 .enter-button {
     display: block;
+
     width: max-content;
+
     margin: 12px auto 0;
+
     padding: 10px 18px;
+
     border: none;
+
     border-radius: 10px;
+
     background: #111;
+
     color: #fff;
+
     font-size: 12px;
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: .25s;
 }
 
 .enter-button:hover {
     background: #333;
+
     transform: translateY(-2px);
 }
 
 .enter-text {
     text-align: center;
+
     margin-top: 8px;
+
     font-size: 11px;
+
     color: #777;
 }
 
@@ -235,73 +349,114 @@ input {
 
 header {
     position: sticky;
+
     top: 0;
+
     z-index: 500;
+
     background: rgba(255,255,255,.94);
+
     backdrop-filter: blur(18px);
+
     border-bottom: 1px solid #e7e7e7;
 }
 
 .navbar {
     max-width: 1200px;
+
     margin: auto;
+
     padding: 13px 20px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
+
+/* BRAND */
+
 .brand {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
+
     text-decoration: none;
+
     color: #111;
 }
 
 .brand img {
     width: 42px;
     height: 42px;
+
     object-fit: contain;
+
     border-radius: 9px;
+
     background: #111;
 }
 
 .brand-text strong {
     display: block;
+
     font-size: 14px;
 }
 
 .brand-text span {
     display: block;
+
     font-size: 9px;
+
     color: #777;
+
     margin-top: 3px;
+
     letter-spacing: .5px;
 }
 
+
+/* NAV */
+
 .nav-links {
     display: flex;
+
     align-items: center;
+
     gap: 28px;
 }
 
 .nav-links a {
     color: #222;
+
     text-decoration: none;
+
     font-size: 13px;
+
     font-weight: 600;
+
     position: relative;
 }
 
 .nav-links a::after {
     content: "";
+
     position: absolute;
+
     left: 0;
+
     bottom: -7px;
+
     width: 0;
+
     height: 1px;
+
     background: #111;
+
     transition: .25s;
 }
 
@@ -309,44 +464,75 @@ header {
     width: 100%;
 }
 
+
+/* HEADER BUTTON */
+
 .header-actions {
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 }
 
 .wa-btn {
     display: inline-flex;
+
     align-items: center;
+
     gap: 7px;
+
     padding: 10px 14px;
+
     border-radius: 10px;
+
     text-decoration: none;
+
     font-size: 12px;
+
     font-weight: bold;
+
     color: #fff;
+
     background: #111;
 }
 
+
+/* MENU */
+
 .menu-button {
     width: 42px;
+
     height: 42px;
+
     border: none;
+
     border-radius: 10px;
+
     background: #111;
+
     color: white;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 5px;
+
     cursor: pointer;
 }
 
 .menu-button span {
     width: 19px;
+
     height: 2px;
+
     background: white;
+
     border-radius: 5px;
 }
 
@@ -357,26 +543,39 @@ header {
 
 .hero {
     max-width: 1200px;
+
     margin: auto;
+
     min-height: 540px;
+
     padding: 70px 20px;
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
+
     gap: 60px;
 }
 
 .hero-label {
     font-size: 11px;
+
     letter-spacing: 3px;
+
     font-weight: bold;
+
     color: #666;
 }
 
 .hero h1 {
     font-size: clamp(45px, 6vw, 78px);
+
     line-height: .94;
+
     letter-spacing: -5px;
+
     margin: 18px 0 25px;
 }
 
@@ -390,66 +589,106 @@ header {
 
 .hero p {
     max-width: 530px;
+
     color: #666;
+
     line-height: 1.7;
+
     font-size: 15px;
 }
 
 .hero-button {
     display: inline-flex;
+
     margin-top: 28px;
+
     padding: 14px 20px;
+
     background: #111;
+
     color: white;
+
     text-decoration: none;
+
     border-radius: 10px;
+
     font-size: 13px;
+
     font-weight: bold;
+
     transition: .25s;
 }
 
 .hero-button:hover {
     transform: translateY(-3px);
+
     background: #333;
 }
 
+
+/* HERO VISUAL */
+
 .hero-visual {
     min-height: 390px;
+
     border-radius: 35px;
+
     background: #f2f2f2;
+
     position: relative;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     overflow: hidden;
 }
 
 .hero-circle {
     position: absolute;
+
     width: 320px;
+
     height: 320px;
+
     border-radius: 50%;
+
     border: 1px solid #d3d3d3;
 }
 
 .hero-circle::before {
     content: "";
+
     position: absolute;
+
     inset: 35px;
+
     border: 1px solid #d3d3d3;
+
     border-radius: 50%;
 }
 
 .hero-logo-visual {
     width: 150px;
+
     height: 150px;
+
     object-fit: contain;
+
     border-radius: 30px;
+
     background: #111;
+
     padding: 15px;
+
     position: relative;
+
     z-index: 2;
-    box-shadow: 0 30px 50px rgba(0,0,0,.15);
+
+    box-shadow:
+        0 30px 50px rgba(0,0,0,.15);
 }
 
 
@@ -459,42 +698,62 @@ header {
 
 .catalog {
     background: #f7f7f7;
+
     padding: 80px 20px 100px;
 }
 
 .catalog-inner {
     max-width: 1200px;
+
     margin: auto;
 }
 
 .catalog-top {
     display: flex;
+
     justify-content: space-between;
+
     align-items: end;
+
     gap: 20px;
+
     margin-bottom: 30px;
 }
 
 .catalog-label {
     font-size: 11px;
+
     letter-spacing: 2px;
+
     color: #777;
+
     font-weight: bold;
 }
 
 .catalog-title {
     font-size: 38px;
+
     letter-spacing: -2px;
+
     margin-top: 8px;
 }
 
+
+/* SEARCH */
+
 .search {
     width: 250px;
+
     padding: 13px 15px;
+
     background: white;
+
     border: 1px solid #ddd;
+
     border-radius: 10px;
+
     outline: none;
+
     font-size: 13px;
 }
 
@@ -502,39 +761,66 @@ header {
     border-color: #111;
 }
 
+
+/* PRODUCTS */
+
 .products {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 16px;
 }
 
+
+/* PRODUCT CARD */
+
 .product {
     background: white;
+
     border: 1px solid #e5e5e5;
+
     border-radius: 18px;
+
     overflow: hidden;
+
     transition: .25s;
 }
 
 .product:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.08);
 }
+
+
+/* PRODUCT IMAGE */
 
 .product-image {
     height: 250px;
+
     background: #eeeeee;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding: 18px;
+
     overflow: hidden;
 }
 
 .product-image img {
     width: 100%;
+
     height: 100%;
+
     object-fit: contain;
+
     transition: transform .35s ease;
 }
 
@@ -542,26 +828,37 @@ header {
     transform: scale(1.05);
 }
 
+
+/* PRODUCT INFO */
+
 .product-info {
     padding: 18px;
 }
 
 .product-info small {
     font-size: 9px;
+
     letter-spacing: 2px;
+
     color: #777;
+
     font-weight: bold;
 }
 
 .product-info h3 {
     font-size: 18px;
+
     margin: 8px 0;
 }
 
 .product-info p {
     font-size: 13px;
+
     line-height: 1.5;
+
     color: #777;
+
+    min-height: 40px;
 }
 
 
@@ -569,98 +866,155 @@ header {
    AROMA
 ========================================================= */
 
+.aroma-area {
+    margin-top: 18px;
+}
+
 .aroma-title {
-    margin-top: 24px;
     font-size: 11px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: #555;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
 }
 
 .aroma-list {
     display: flex;
+
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
+
+    gap: 7px;
 }
 
 .aroma-btn {
-    border: 1px solid #ddd;
+    border: 1px solid #d7d7d7;
+
     background: #fff;
+
     color: #333;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 12px;
+
+    padding: 8px 11px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
     cursor: pointer;
+
     transition: .2s;
 }
 
 .aroma-btn:hover {
     border-color: #111;
+
+    transform: translateY(-1px);
 }
 
-.aroma-btn.active {
+.aroma-btn.selected {
     background: #111;
-    color: #fff;
+
+    color: white;
+
     border-color: #111;
 }
 
 .aroma-btn.premium {
-    border-color: #cfcfcf;
+    border-color: #b7b7b7;
 }
 
 .premium-note {
-    margin-top: 12px;
+    margin-top: 10px;
+
     color: #777;
+
     font-size: 11px;
+
     line-height: 1.5;
 }
 
+.selected-aroma {
+    margin-top: 12px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+.selected-aroma strong {
+    color: #111;
+}
+
+
+/* PRODUCT BOTTOM */
+
 .product-bottom {
     margin-top: 18px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 10px;
 }
 
 .price {
     font-size: 13px;
-    color: #111;
-    font-weight: bold;
-}
 
-.selected-aroma {
-    font-size: 12px;
-    color: #777;
-    margin-top: 12px;
-    min-height: 16px;
+    color: #111;
+
+    font-weight: bold;
 }
 
 .add {
     display: inline-block;
+
     padding: 10px 13px;
+
     background: #111;
+
     color: white;
+
     border-radius: 9px;
+
     text-decoration: none;
+
     font-size: 11px;
+
     font-weight: bold;
+
     transition: .2s;
+
     white-space: nowrap;
+
+    border: none;
+
+    cursor: pointer;
 }
 
 .add:hover {
     background: #444;
+
     transform: translateY(-2px);
 }
 
+
+/* NO RESULT */
+
 .no-result {
     display: none;
+
     grid-column: 1 / -1;
+
     text-align: center;
+
     padding: 50px 20px;
+
     color: #777;
+
     font-size: 14px;
 }
 
@@ -670,76 +1024,76 @@ header {
 ========================================================= */
 
 .clients {
+    padding: 80px 20px;
+
     background: #fff;
-    padding: 90px 20px;
 }
 
 .clients-inner {
     max-width: 1200px;
+
     margin: auto;
 }
 
-.clients-header {
+.clients-head {
     text-align: center;
+
     margin-bottom: 35px;
 }
 
 .clients-label {
     font-size: 11px;
+
     letter-spacing: 3px;
+
     color: #777;
+
     font-weight: bold;
 }
 
 .clients-title {
+    margin-top: 10px;
+
     font-size: 38px;
+
     letter-spacing: -2px;
-    margin-top: 8px;
 }
 
-.clients-desc {
-    max-width: 600px;
-    margin: 12px auto 0;
+.clients-subtitle {
     color: #777;
-    font-size: 14px;
-    line-height: 1.6;
+
+    font-size: 13px;
+
+    margin-top: 10px;
 }
 
-.clients-banner {
-    position: relative;
+.client-gallery {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.client-gallery img {
     width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    border-radius: 24px;
-    overflow: hidden;
-    background: #f5f5f5;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 25px 60px rgba(0,0,0,.08);
-}
 
-.clients-banner + .clients-banner {
-    margin-top: 20px;
-}
-
-.clients-banner img {
     display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    transition: transform .5s ease;
+
+    border-radius: 18px;
+
+    background: #f5f5f5;
+
+    border: 1px solid #e5e5e5;
+
+    transition: .25s;
 }
 
-.clients-banner:hover img {
-    transform: scale(1.015);
-}
+.client-gallery img:hover {
+    transform: translateY(-4px);
 
-.clients-more {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 12px;
-    color: #777;
-    letter-spacing: 2px;
-    font-weight: bold;
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.08);
 }
 
 
@@ -749,53 +1103,77 @@ header {
 
 footer {
     background: #080808;
+
     color: white;
+
     padding: 55px 20px 20px;
 }
 
 .footer-inner {
     max-width: 1200px;
+
     margin: auto;
+
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
     gap: 35px;
 }
 
 .footer-logo {
     width: 55px;
+
     height: 55px;
+
     object-fit: contain;
+
     border-radius: 12px;
+
     background: white;
+
     padding: 5px;
+
     margin-bottom: 10px;
 }
 
 .footer-company {
     font-size: 12px;
+
     margin-top: 5px;
+
     color: #aaa;
 }
 
 .footer-desc {
     max-width: 280px;
+
     color: #999;
+
     font-size: 12px;
+
     line-height: 1.6;
+
     margin-top: 15px;
 }
 
 .footer-column h4 {
     font-size: 12px;
+
     margin-bottom: 15px;
 }
 
 .footer-column a,
 .footer-column p {
     display: block;
+
     color: #999;
+
     text-decoration: none;
+
     font-size: 12px;
+
     margin-bottom: 10px;
 }
 
@@ -805,11 +1183,17 @@ footer {
 
 .copyright {
     max-width: 1200px;
+
     margin: 40px auto 0;
+
     padding-top: 20px;
+
     border-top: 1px solid #222;
+
     text-align: center;
+
     color: #666;
+
     font-size: 10px;
 }
 
@@ -820,29 +1204,47 @@ footer {
 
 .menu-overlay {
     position: fixed;
+
     inset: 0;
+
     z-index: 999;
+
     background: rgba(0,0,0,.65);
+
     opacity: 0;
+
     visibility: hidden;
+
     transition: .3s;
 }
 
 .menu-overlay.active {
     opacity: 1;
+
     visibility: visible;
 }
 
 .sidebar {
     position: absolute;
+
     top: 0;
+
     right: 0;
+
     width: min(390px, 90%);
+
     height: 100%;
+
     background: white;
+
     padding: 25px;
+
     transform: translateX(100%);
-    transition: transform .35s cubic-bezier(.4,0,.2,1);
+
+    transition:
+        transform .35s
+        cubic-bezier(.4,0,.2,1);
+
     overflow-y: auto;
 }
 
@@ -852,9 +1254,13 @@ footer {
 
 .sidebar-head {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     padding-bottom: 20px;
+
     border-bottom: 1px solid #eee;
 }
 
@@ -864,11 +1270,17 @@ footer {
 
 .close {
     width: 40px;
+
     height: 40px;
+
     border: none;
+
     border-radius: 10px;
+
     background: #eee;
+
     cursor: pointer;
+
     font-size: 18px;
 }
 
@@ -878,15 +1290,25 @@ footer {
 
 .sidebar-menu a {
     display: flex;
+
     align-items: center;
+
     gap: 13px;
+
     padding: 13px;
+
     margin-bottom: 5px;
+
     border-radius: 11px;
+
     color: #111;
+
     text-decoration: none;
+
     font-weight: bold;
+
     font-size: 13px;
+
     transition: .2s;
 }
 
@@ -896,25 +1318,37 @@ footer {
 
 .sidebar-icon {
     width: 37px;
+
     height: 37px;
+
     background: #111;
+
     color: white;
+
     border-radius: 9px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
 .sidebar-contact {
     margin-top: 25px;
+
     padding: 20px;
+
     background: #111;
+
     color: white;
+
     border-radius: 16px;
 }
 
 .sidebar-contact small {
     color: #aaa;
+
     letter-spacing: 1px;
 }
 
@@ -924,7 +1358,9 @@ footer {
 
 .sidebar-contact p {
     color: #aaa;
+
     font-size: 12px;
+
     line-height: 1.6;
 }
 
@@ -935,12 +1371,17 @@ footer {
 
 .reveal {
     opacity: 0;
+
     transform: translateY(25px);
-    transition: opacity .7s ease, transform .7s ease;
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
 }
 
 .reveal.show {
     opacity: 1;
+
     transform: translateY(0);
 }
 
@@ -958,6 +1399,7 @@ footer {
 
     .hero {
         grid-template-columns: 1fr;
+
         padding-top: 50px;
     }
 
@@ -972,6 +1414,11 @@ footer {
     .footer-inner {
         grid-template-columns: 1fr 1fr;
     }
+
+    .client-gallery {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
@@ -979,11 +1426,13 @@ footer {
 
     .welcome-paper {
         height: 94vh;
+
         padding: 25px 22px;
     }
 
     .welcome-logo img {
         width: 68px;
+
         height: 68px;
     }
 
@@ -993,6 +1442,7 @@ footer {
 
     .welcome-content {
         font-size: 12px;
+
         line-height: 1.6;
     }
 
@@ -1010,6 +1460,7 @@ footer {
 
     .hero h1 {
         font-size: 48px;
+
         letter-spacing: -3px;
     }
 
@@ -1019,6 +1470,7 @@ footer {
 
     .catalog-top {
         flex-direction: column;
+
         align-items: stretch;
     }
 
@@ -1039,24 +1491,11 @@ footer {
     }
 
     .clients {
-        padding: 65px 15px;
+        padding: 60px 15px;
     }
 
     .clients-title {
-        font-size: 30px;
-        letter-spacing: -1px;
-    }
-
-    .clients-desc {
-        font-size: 13px;
-    }
-
-    .clients-banner {
-        border-radius: 16px;
-    }
-
-    .clients-more {
-        font-size: 10px;
+        font-size: 32px;
     }
 
 }
@@ -1072,7 +1511,9 @@ footer {
     *::before,
     *::after {
         animation-duration: .01ms !important;
+
         transition-duration: .01ms !important;
+
         scroll-behavior: auto !important;
     }
 
@@ -1243,7 +1684,10 @@ footer {
 
     <div class="navbar">
 
-        <a href="#" class="brand">
+        <a
+            href="#"
+            class="brand"
+        >
 
             <img
                 src="https://f.top4top.io/p_3876ilwmz1.jpg"
@@ -1275,12 +1719,12 @@ footer {
                 Katalog Produk
             </a>
 
-            <a href="#client">
-                Our Client
-            </a>
-
             <a href="#tentang">
                 Tentang Kami
+            </a>
+
+            <a href="#clients">
+                Our Client
             </a>
 
             <a href="#kontak">
@@ -1337,6 +1781,7 @@ footer {
             KATALOG PRODUK
         </div>
 
+
         <h1>
 
             Pesan produk
@@ -1347,13 +1792,16 @@ footer {
 
         </h1>
 
+
         <p>
             Temukan berbagai produk dari
             PT. Multi Fresh Indonesia.
-            Pilih produk yang kamu butuhkan
-            dan langsung hubungi kami melalui
+            Pilih produk yang kamu butuhkan,
+            tentukan aroma jika tersedia,
+            lalu langsung hubungi kami melalui
             WhatsApp untuk pemesanan.
         </p>
+
 
         <a
             href="#katalog"
@@ -1363,6 +1811,7 @@ footer {
         </a>
 
     </div>
+
 
 
     <div class="hero-visual reveal">
@@ -1392,6 +1841,7 @@ footer {
 
     <div class="catalog-inner">
 
+
         <div class="catalog-top reveal">
 
             <div>
@@ -1418,10 +1868,15 @@ footer {
         </div>
 
 
+
         <div
             class="products"
             id="products"
-        ></div>
+        >
+
+            <!-- PRODUK DIBUAT OTOMATIS -->
+
+        </div>
 
 
         <div
@@ -1443,54 +1898,45 @@ footer {
 
 <section
     class="clients"
-    id="client"
+    id="clients"
 >
 
     <div class="clients-inner">
 
-        <div class="clients-header reveal">
+        <div class="clients-head reveal">
 
             <div class="clients-label">
                 OUR CLIENT
             </div>
 
             <h2 class="clients-title">
-                Dipercaya oleh berbagai bisnis.
+                Dipercaya berbagai bisnis.
             </h2>
 
-            <p class="clients-desc">
-                Produk dan layanan PT. Multi Fresh Indonesia
-                telah digunakan oleh berbagai hotel, restoran,
-                villa, dan berbagai bisnis lainnya.
+            <p class="clients-subtitle">
+                Beberapa client yang telah menggunakan
+                produk dan layanan Multi Fresh Indonesia.
             </p>
 
         </div>
 
 
-        <div class="clients-banner reveal">
+        <div class="client-gallery">
 
             <img
                 src="https://h.top4top.io/p_3877qvnte1.jpg"
-                alt="Our Client PT. Multi Fresh Indonesia"
+                alt="Our Client Multi Fresh Indonesia"
                 loading="lazy"
+                class="reveal"
             >
-
-        </div>
-
-
-        <div class="clients-banner reveal">
 
             <img
                 src="https://g.top4top.io/p_387799mjv1.jpg"
-                alt="Our Client PT. Multi Fresh Indonesia"
+                alt="Our Client Multi Fresh Indonesia"
                 loading="lazy"
+                class="reveal"
             >
 
-        </div>
-
-
-        <div class="clients-more">
-            AND MANY MORE
         </div>
 
     </div>
@@ -1506,6 +1952,7 @@ footer {
 <footer id="kontak">
 
     <div class="footer-inner">
+
 
         <div>
 
@@ -1542,12 +1989,12 @@ footer {
                 Katalog Produk
             </a>
 
-            <a href="#client">
-                Our Client
-            </a>
-
             <a href="#tentang">
                 Tentang Kami
+            </a>
+
+            <a href="#clients">
+                Our Client
             </a>
 
             <a href="#kontak">
@@ -1626,7 +2073,9 @@ footer {
     onclick="outsideMenu(event)"
 >
 
+
     <aside class="sidebar">
+
 
         <div class="sidebar-head">
 
@@ -1645,6 +2094,7 @@ footer {
 
 
         <div class="sidebar-menu">
+
 
             <a
                 href="#"
@@ -1675,20 +2125,6 @@ footer {
 
 
             <a
-                href="#client"
-                onclick="closeMenu()"
-            >
-
-                <span class="sidebar-icon">
-                    ★
-                </span>
-
-                Our Client
-
-            </a>
-
-
-            <a
                 href="#tentang"
                 onclick="closeMenu()"
             >
@@ -1698,6 +2134,20 @@ footer {
                 </span>
 
                 Tentang Kami
+
+            </a>
+
+
+            <a
+                href="#clients"
+                onclick="closeMenu()"
+            >
+
+                <span class="sidebar-icon">
+                    ★
+                </span>
+
+                Our Client
 
             </a>
 
@@ -1730,6 +2180,7 @@ footer {
 
             </a>
 
+
         </div>
 
 
@@ -1745,8 +2196,8 @@ footer {
 
             <p>
                 Hubungi kami untuk informasi
-                produk, harga, stok, dan
-                pemesanan.
+                produk, harga, stok, aroma,
+                dan pemesanan.
             </p>
 
             <br>
@@ -1771,6 +2222,7 @@ footer {
 
         </div>
 
+
     </aside>
 
 </div>
@@ -1788,42 +2240,13 @@ const WHATSAPP_NUMBER = "6285795209442";
 
 /* =========================================================
    DATA PRODUK
-   AROMA HANYA YANG ADA DI BOOKLET
 ========================================================= */
 
 const productsData = [
 
-    {
-        name: "Iron Spray",
-        size: "5 Liter",
-        price: "Rp150.000",
-        image: "https://l.top4top.io/p_38773gc9p1.jpg",
-        aromas: [
-            "Downy Black",
-            "Downy Gold",
-            "Snappy",
-            "Akasia",
-            "Ocean Fresh",
-            "Sakura"
-        ]
-    },
-
-
-    {
-        name: "Hand Sanitizer",
-        size: "5 Liter",
-        price: "Rp220.000",
-        image: "https://k.top4top.io/p_3877ochp91.jpg"
-    },
-
-
-    {
-        name: "Hand Sanitizer Liquid",
-        size: "5 Liter",
-        price: "Rp180.000",
-        image: "https://i.top4top.io/p_3877zpe9s1.jpg"
-    },
-
+    /* =====================================================
+       PRODUK DENGAN AROMA DARI BOOKLET
+    ===================================================== */
 
     {
         name: "Shower Gel",
@@ -1858,21 +2281,6 @@ const productsData = [
             "Citrus",
             "Coconut Vanilla",
             "Chocolate Mint"
-        ]
-    },
-
-
-    {
-        name: "Softener",
-        size: "5 Liter",
-        price: "Rp55.000",
-        image: "https://i.top4top.io/p_3877ihot61.jpg",
-
-        aromas: [
-            "Akasia",
-            "Sakura",
-            "Snappy",
-            "Ocean Fresh"
         ]
     },
 
@@ -1914,18 +2322,38 @@ const productsData = [
 
 
     {
-        name: "Detergent",
+        name: "Conditioner",
         size: "5 Liter",
-        price: "Rp45.000",
-        image: "https://e.top4top.io/p_3877sghod1.jpg"
+        price: "Rp185.000",
+        image: "https://b.top4top.io/p_3877gf6av1.jpg",
+
+        aromas: [
+            "Jasmine",
+            "Apple",
+            "Greentea",
+            "Coconut",
+            "Lemon",
+            "Strawberry",
+            "Melon",
+            "Vanilla"
+        ]
     },
 
 
     {
-        name: "Pet Shampoo",
-        size: "Contact",
-        price: "Hubungi kami",
-        image: "https://f.top4top.io/p_3877cxgbb1.jpg"
+        name: "Hand Wash",
+        size: "5 Liter",
+        price: "Rp60.000",
+        image: "https://k.top4top.io/p_3877ochp91.jpg",
+
+        aromas: [
+            "Mint",
+            "Apple",
+            "Grape",
+            "Ocean Fresh",
+            "Bubble Gum",
+            "Strawberry"
+        ]
     },
 
 
@@ -1943,7 +2371,7 @@ const productsData = [
 
 
     {
-        name: "Floor Cleaner",
+        name: "Floor Detergent",
         size: "5 Liter",
         price: "Rp55.000",
         image: "https://c.top4top.io/p_3877hgzi81.jpg",
@@ -1956,6 +2384,81 @@ const productsData = [
             "Lavender",
             "Rose"
         ]
+    },
+
+
+    {
+        name: "Cloth Detergent",
+        size: "5 Liter",
+        price: "Rp45.000",
+        image: "https://e.top4top.io/p_3877sghod1.jpg",
+
+        aromas: [
+            "Ocean Fresh",
+            "Molto Blue",
+            "Baccarat",
+            "Grace"
+        ]
+    },
+
+
+    {
+        name: "Softener",
+        size: "5 Liter",
+        price: "Rp55.000",
+        image: "https://i.top4top.io/p_3877ihot61.jpg",
+
+        aromas: [
+            "Akasia",
+            "Sakura",
+            "Snappy",
+            "Ocean Fresh"
+        ]
+    },
+
+
+    {
+        name: "Iron Spray",
+        size: "5 Liter",
+        price: "Rp150.000",
+        image: "https://l.top4top.io/p_38773gc9p1.jpg",
+
+        aromas: [
+            "Downy Black",
+            "Downy Gold",
+            "Snappy",
+            "Akasia",
+            "Ocean Fresh",
+            "Sakura"
+        ]
+    },
+
+
+    /* =====================================================
+       PRODUK TANPA AROMA DI BOOKLET
+    ===================================================== */
+
+    {
+        name: "Hand Sanitizer",
+        size: "5 Liter",
+        price: "Rp220.000",
+        image: "https://k.top4top.io/p_3877ochp91.jpg"
+    },
+
+
+    {
+        name: "Hand Sanitizer Liquid",
+        size: "5 Liter",
+        price: "Rp180.000",
+        image: "https://i.top4top.io/p_3877zpe9s1.jpg"
+    },
+
+
+    {
+        name: "Pet Shampoo",
+        size: "5 Liter",
+        price: "Hubungi kami",
+        image: "https://f.top4top.io/p_3877cxgbb1.jpg"
     },
 
 
@@ -2000,21 +2503,10 @@ const productsData = [
 
 
     {
-        name: "Conditioner",
+        name: "2in1 Shower Gel & Shampoo",
         size: "35 ml",
-        price: "Rp2.200",
-        image: "https://b.top4top.io/p_3877gf6av1.jpg",
-
-        aromas: [
-            "Jasmine",
-            "Apple",
-            "Greentea",
-            "Coconut",
-            "Lemon",
-            "Strawberry",
-            "Melon",
-            "Vanilla"
-        ]
+        price: "Rp2.000",
+        image: "https://c.top4top.io/p_3877cpnnf1.jpg"
     },
 
 
@@ -2027,22 +2519,28 @@ const productsData = [
 
 
     {
-        name: "2in1 Shower Gel & Shampoo",
-        size: "35 ml",
-        price: "Rp2.000",
-        image: "https://c.top4top.io/p_3877cpnnf1.jpg"
-    },
-
-
-    {
         name: "Shampoo",
         size: "35 ml",
         price: "Rp2.000",
         image: "https://k.top4top.io/p_38773atsy1.jpg"
+    },
 
+
+    {
+        name: "Conditioner",
+        size: "35 ml",
+        price: "Rp2.200",
+        image: "https://b.top4top.io/p_3877gf6av1.jpg"
     }
 
 ];
+
+
+/* =========================================================
+   STATE AROMA
+========================================================= */
+
+const selectedAromas = {};
 
 
 /* =========================================================
@@ -2057,6 +2555,7 @@ function renderProducts(list) {
 
     productsContainer.innerHTML = "";
 
+
     list.forEach(function(product, index) {
 
         const card =
@@ -2065,93 +2564,92 @@ function renderProducts(list) {
         card.className =
             "product reveal";
 
+
         card.setAttribute(
             "data-name",
             product.name.toLowerCase()
         );
 
 
+        const productId =
+            "product-" + index;
+
+
         let aromaHTML = "";
 
 
+        /* =================================================
+           KALAU ADA AROMA
+        ================================================= */
+
         if (
             product.aromas &&
-            product.aromas.length
+            product.aromas.length > 0
         ) {
 
-            aromaHTML += `
+            aromaHTML = `
 
-                <div class="aroma-title">
-                    VARIAN AROMA
-                </div>
+                <div class="aroma-area">
 
-                <div
-                    class="aroma-list"
-                    data-product-index="${index}"
-                >
-            `;
+                    <div class="aroma-title">
+                        VARIAN AROMA
+                    </div>
 
 
-            product.aromas.forEach(function(aroma) {
+                    <div class="aroma-list">
 
-                const isPremium =
-                    product.premium &&
-                    product.premium.includes(aroma);
+                        ${product.aromas.map(function(aroma) {
 
-
-                aromaHTML += `
-
-                    <button
-                        type="button"
-                        class="aroma-btn ${isPremium ? "premium" : ""}"
-                        data-aroma="${aroma}"
-                        onclick="selectAroma(this, ${index})"
-                    >
-                        ${aroma}
-                    </button>
-
-                `;
-
-            });
+                            const isPremium =
+                                product.premium &&
+                                product.premium.includes(aroma);
 
 
-            aromaHTML += `
+                            return `
 
-                </div>
+                                <button
+                                    type="button"
+                                    class="aroma-btn ${isPremium ? "premium" : ""}"
+                                    data-product="${productId}"
+                                    data-aroma="${escapeHTML(aroma)}"
+                                    onclick="selectAroma(
+                                        '${productId}',
+                                        '${escapeJS(aroma)}',
+                                        this
+                                    )"
+                                >
+                                    ${escapeHTML(aroma)}
+                                </button>
 
-            `;
+                            `;
 
+                        }).join("")}
 
-            if (product.premium) {
+                    </div>
 
-                aromaHTML += `
 
                     <div class="premium-note">
                         * Premium scent +Rp15.000
                     </div>
 
-                `;
 
-            }
+                    <div
+                        class="selected-aroma"
+                        id="selected-${productId}"
+                    >
+                        Pilih aroma
+                    </div>
+
+                </div>
+
+            `;
 
         }
 
 
-        const message =
-            encodeURIComponent(
-                createWhatsAppMessage(
-                    product,
-                    ""
-                )
-            );
-
-
-        const whatsappLink =
-            "https://wa.me/" +
-            WHATSAPP_NUMBER +
-            "?text=" +
-            message;
-
+        /* =================================================
+           WHATSAPP BUTTON
+        ================================================= */
 
         card.innerHTML = `
 
@@ -2159,7 +2657,7 @@ function renderProducts(list) {
 
                 <img
                     src="${product.image}"
-                    alt="${product.name}"
+                    alt="${escapeHTML(product.name)}"
                     loading="lazy"
                     onerror="this.style.display='none'"
                 >
@@ -2175,50 +2673,35 @@ function renderProducts(list) {
 
 
                 <h3>
-                    ${product.name}
+                    ${escapeHTML(product.name)}
                 </h3>
 
 
                 <p>
-                    ${product.size}
+                    ${escapeHTML(product.size)}
                 </p>
 
 
                 ${aromaHTML}
 
 
-                ${
-                    product.aromas
-                    ?
-                    `
-                    <div
-                        class="selected-aroma"
-                        id="selected-aroma-${index}"
-                    >
-                        Pilih aroma
-                    </div>
-                    `
-                    :
-                    ""
-                }
-
-
                 <div class="product-bottom">
 
                     <span class="price">
-                        ${product.price}
+                        ${escapeHTML(product.price)}
                     </span>
 
 
-                    <a
-                        href="${whatsappLink}"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        type="button"
                         class="add"
-                        id="order-${index}"
+                        onclick="orderProduct(
+                            ${index},
+                            '${productId}'
+                        )"
                     >
                         + Pesan
-                    </a>
+                    </button>
 
                 </div>
 
@@ -2238,33 +2721,28 @@ function renderProducts(list) {
 
 
 /* =========================================================
-   WHATSAPP MESSAGE
+   ESCAPE HTML
 ========================================================= */
 
-function createWhatsAppMessage(
-    product,
-    aroma
-) {
+function escapeHTML(text) {
 
-    let text =
-        "Halo Multi Fresh Indonesia, saya ingin memesan " +
-        product.name +
-        " " +
-        product.size +
-        ".";
+    return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
-
-    if (aroma) {
-
-        text +=
-            " Aroma yang dipilih: " +
-            aroma +
-            ".";
-
-    }
+}
 
 
-    return text;
+function escapeJS(text) {
+
+    return String(text)
+        .replace(/\\/g, "\\\\")
+        .replace(/'/g, "\\'")
+        .replace(/\n/g, "\\n")
+        .replace(/\r/g, "\\r");
 
 }
 
@@ -2274,78 +2752,122 @@ function createWhatsAppMessage(
 ========================================================= */
 
 function selectAroma(
-    button,
-    productIndex
+    productId,
+    aroma,
+    button
 ) {
 
-    const product =
-        productsData[productIndex];
+    selectedAromas[productId] =
+        aroma;
 
 
-    const aroma =
-        button.getAttribute(
-            "data-aroma"
-        );
+    const parent =
+        button.parentElement;
 
 
-    const buttons =
-        button.parentElement
-        .querySelectorAll(
-            ".aroma-btn"
-        );
+    parent
+        .querySelectorAll(".aroma-btn")
+        .forEach(function(btn) {
 
+            btn.classList.remove(
+                "selected"
+            );
 
-    buttons.forEach(function(btn) {
-
-        btn.classList.remove(
-            "active"
-        );
-
-    });
+        });
 
 
     button.classList.add(
-        "active"
+        "selected"
     );
 
 
     const selected =
         document.getElementById(
-            "selected-aroma-" +
-            productIndex
+            "selected-" + productId
         );
 
 
-    if (selected) {
+    selected.innerHTML =
+        "Aroma dipilih: <strong>" +
+        escapeHTML(aroma) +
+        "</strong>";
 
-        selected.innerText =
-            "Aroma: " +
-            aroma;
+}
+
+
+/* =========================================================
+   PESAN PRODUK
+========================================================= */
+
+function orderProduct(
+    index,
+    productId
+) {
+
+    const product =
+        productsData[index];
+
+
+    let aroma =
+        selectedAromas[productId];
+
+
+    /* PRODUK DENGAN AROMA */
+
+    if (
+        product.aromas &&
+        product.aromas.length > 0
+    ) {
+
+        if (!aroma) {
+
+            alert(
+                "Pilih varian aroma terlebih dahulu ya."
+            );
+
+            return;
+
+        }
 
     }
 
 
-    const orderButton =
-        document.getElementById(
-            "order-" +
-            productIndex
-        );
+    let message =
+        "Halo Multi Fresh Indonesia,%0A%0A" +
+        "Saya ingin memesan:%0A" +
+        "Produk: " +
+        encodeURIComponent(product.name) +
+        "%0A" +
+        "Ukuran: " +
+        encodeURIComponent(product.size);
 
 
-    const message =
-        encodeURIComponent(
-            createWhatsAppMessage(
-                product,
-                aroma
-            )
-        );
+    if (aroma) {
+
+        message +=
+            "%0A" +
+            "Aroma: " +
+            encodeURIComponent(aroma);
+
+    }
 
 
-    orderButton.href =
+    message +=
+        "%0A%0ATerima kasih.";
+
+
+    const whatsappLink =
         "https://wa.me/" +
         WHATSAPP_NUMBER +
         "?text=" +
         message;
+
+
+    window.open(
+        whatsappLink,
+        "_blank",
+        "noopener,noreferrer"
+    );
 
 }
 
@@ -2365,9 +2887,7 @@ function searchProduct() {
 
 
     const cards =
-        document.querySelectorAll(
-            ".product"
-        );
+        document.querySelectorAll(".product");
 
 
     let found = 0;
@@ -2381,15 +2901,19 @@ function searchProduct() {
             .toLowerCase();
 
 
-        if (name.includes(search)) {
+        if (
+            name.includes(search)
+        ) {
 
-            card.style.display = "";
+            card.style.display =
+                "";
 
             found++;
 
         } else {
 
-            card.style.display = "none";
+            card.style.display =
+                "none";
 
         }
 
@@ -2425,20 +2949,24 @@ let progress = 0;
 
 const TOTAL_TIME = 15000;
 
+
 const progressBar =
     document.getElementById(
         "loadingProgress"
     );
+
 
 const progressText =
     document.getElementById(
         "loadingPercent"
     );
 
+
 const welcome =
     document.getElementById(
         "welcome"
     );
+
 
 const startTime =
     Date.now();
@@ -2448,17 +2976,17 @@ const loading =
     setInterval(function() {
 
         const elapsed =
-            Date.now() -
-            startTime;
+            Date.now() - startTime;
 
 
         progress =
             Math.min(
                 100,
                 Math.floor(
-                    (elapsed /
-                    TOTAL_TIME) *
-                    100
+                    (
+                        elapsed /
+                        TOTAL_TIME
+                    ) * 100
                 )
             );
 
@@ -2473,13 +3001,19 @@ const loading =
 
         if (progress >= 100) {
 
-            clearInterval(loading);
+            clearInterval(
+                loading
+            );
 
-            setTimeout(function() {
 
-                enterCatalog();
+            setTimeout(
+                function() {
 
-            }, 300);
+                    enterCatalog();
+
+                },
+                300
+            );
 
         }
 
@@ -2492,9 +3026,15 @@ const loading =
 
 function enterCatalog() {
 
-    clearInterval(loading);
+    clearInterval(
+        loading
+    );
 
-    welcome.classList.add("hide");
+
+    welcome.classList.add(
+        "hide"
+    );
+
 
     document.body.classList.remove(
         "lock"
@@ -2514,6 +3054,7 @@ function openMenu() {
         .classList
         .add("active");
 
+
     document.body.classList.add(
         "lock"
     );
@@ -2527,6 +3068,7 @@ function closeMenu() {
         .getElementById("menuOverlay")
         .classList
         .remove("active");
+
 
     document.body.classList.remove(
         "lock"
@@ -2580,10 +3122,10 @@ function observeReveal() {
                                 .classList
                                 .add("show");
 
-                            revealObserver
-                                .unobserve(
-                                    entry.target
-                                );
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
 
                         }
 
@@ -2611,7 +3153,7 @@ function observeReveal() {
 
 
 /* =========================================================
-   ESC SIDEBAR
+   ESC UNTUK SIDEBAR
 ========================================================= */
 
 document.addEventListener(
@@ -2619,8 +3161,7 @@ document.addEventListener(
     function(event) {
 
         if (
-            event.key ===
-            "Escape"
+            event.key === "Escape"
         ) {
 
             closeMenu();
